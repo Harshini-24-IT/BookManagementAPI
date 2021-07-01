@@ -50,7 +50,7 @@ Method          GET
 shapeAI.get("/is/:isbn", async(req, res) => {
   const getSpecificBook = await BookModel.findOne({ISBN: req.params.isbn});
 
-  if (!getSpecificBook.length) {
+  if (!getSpecificBook) {
     return res.json({
       error: `No book found for the ISBN of ${req.params.isbn}`,
     });
@@ -133,8 +133,8 @@ Method          POST
 shapeAI.post("/book/new", async (req, res) => {
   const { newBook } = req.body;
   
-  BookModel.create(newBook);
-  return res.json({ message: "book was added!" });
+  const addNewBook = BookModel.create(newBook);
+  return res.json({ books:addNewBook,  message: "book was added!" });
 });
 
 /*
@@ -157,15 +157,21 @@ Access          PUBLIC
 Parameters      isbn
 Method          PUT
 */
-shapeAI.put("/book/update/:isbn", (req, res) => {
-  database.books.forEach((book) => {
-    if (book.ISBN === req.params.isbn) {
-      book.title = req.body.bookTitle;
-      return;
-    }
-  });
+shapeAI.put("/book/update/:isbn", async (req, res) => {
 
-  return res.json({ books: database.books });
+   const UpdatedBook = await BookModel.findOneAndUpdate({
+
+      ISBN : req.params.isbn,
+
+   },
+   {
+     title: req.body.bookTitle,
+   },
+   {
+     new:true,
+   }
+   );
+  return res.json({ books: UpdatedBook });
 });
 
 /*
