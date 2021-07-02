@@ -24,12 +24,12 @@ let books = [
   const authors = [
     {
       id: 1,
-      name: "pavan",
+      name: "harshu",
       books: ["12345ONE", "12345Two"],
     },
     {
       id: 2,
-      name: "Deepak",
+      name: "aki",
       books: ["12345ONE"],
     },
   ];
@@ -37,13 +37,13 @@ let books = [
   const publications = [
     {
       id: 1,
-      name: "Chakra",
+      name: "Harshu Publications",
       books: ["12345ONE"],
     },
     {
       id: 2,
-      name: "Vickie Publications",
-      books: ["12345ONE"],
+      name: "Shan Publications",
+      books: ["12345TWO"],
     },
   ];
   

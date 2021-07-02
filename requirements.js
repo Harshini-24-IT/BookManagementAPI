@@ -23,7 +23,7 @@
 // to get all books ✅ 📌
 // to get specific book ✅ 📌
 // to get a list of books based on category✅ 📌
-// to get a list of books based on author -> [Task]🔥 📕
+// to get a list of books based on author -> [Task]
 
 // POST
 // New Book ✅ 📌
@@ -44,17 +44,17 @@
 
 // GET
 // to get all authors✅ 📌
-// to get specific author [Task]🔥  📕
-// to get a list of authors based on a book. ✅  📕
+// to get specific author [Task]
+// to get a list of authors based on a book. ✅  
 
 // POST
 // New Author ✅ 📌
 
 // PUT
-// update Author name using id [Task] 🔥
+// update Author name using id [Task] 
 
 // DELETE
-// Delete an author [Task] 🔥🚀
+// Delete an author [Task] 
 
 // ---------------------------------------------------------------------------------------
 
@@ -63,20 +63,20 @@
 // We need an API
 
 // GET
-// to get all publications ✅  📕
-// to get specific publication [Task]🔥  📕
-// to get a list of publications based on a book. [Task]🔥  📕
+// to get all publications ✅  
+// to get specific publication [Task]
+// to get a list of publications based on a book. [Task]
 
 // POST
-// Add new publication [task] 🔥  📕
+// Add new publication [task] 
 
 // PUT
-// update publication name using id [Task] 🔥
+// update publication name using id [Task] 
 // update/add new book to a publication✅
 
 // DELETE
 // delete a book from publication ✅
-// delete a publication [Task] 🔥🚀
+// delete a publication [Task] 
 
 
 // How does the server serves the request ?
