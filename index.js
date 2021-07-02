@@ -442,7 +442,7 @@ shapeAI.delete("/book/delete/author/:isbn/:authorId", async (req, res) => {
 });
 /*
 Route           /a/delete/id
-Description     delete a publication 
+Description     delete an author 
 Access          PUBLIC
 Parameters      id
 Method          DELETE
