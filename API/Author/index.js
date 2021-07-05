@@ -10,8 +10,13 @@ Parameters      NONE
 Method          GET
 */
 Router.get("/", async (req, res) => {
+  try{
   const getAllAuthors = await AuthorModel.find();
   return res.json({ authors: getAllAuthors });
+  }
+  catch(error){
+    return res.json({ error: error.message });
+  }
 });
 
 /*
@@ -47,11 +52,16 @@ Parameters      NONE
 Method          POST
 */
 Router.post("/new", (req, res) => {
+  try{
   const { newAuthor } = req.body;
 
   AuthorModel.create(newAuthor);
 
   return res.json({ message: "author was added!" });
+  }
+  catch(error){
+    return res.json({ error: error.message });
+  }
 });
 
 module.exports = Router;
